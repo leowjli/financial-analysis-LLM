@@ -1,1 +1,1 @@
-# financial-analysis-LLM
+# Financial Analysis and Automation LLM
