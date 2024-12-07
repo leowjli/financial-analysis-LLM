@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.eggs
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+venv/
+.env/
+
+# Configuration files
+*.env
+
+# Streamlit
+.streamlit/
+
+# IDE settings (PyCharm, VSCode, etc.)
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Output directories
+output/
+
+# Pinecone or OpenAI sensitive files (If you save any logs or keys in the repo)
+secrets.json
+groq_api_key.txt
