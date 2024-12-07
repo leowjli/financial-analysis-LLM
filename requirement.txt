@@ -1,0 +1,10 @@
+streamlit
+yfinance
+pandas
+numpy
+langchain_pinecone
+openai
+python-dotenv 
+langchain-community 
+sentence_transformers
+request
