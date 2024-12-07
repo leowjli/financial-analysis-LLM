@@ -219,22 +219,6 @@ namespace = "stock-descriptions"
 hf_embeddings = HuggingFaceEmbeddings()
 vectorstore = PineconeVectorStore(index_name=index_name, embedding=hf_embeddings)
 
-# Sequential Processing
-# Too long!
-for idx, stock in company_tickers.items():
-    stock_ticker = stock['ticker']
-    stock_data = get_stock_info(stock_ticker)
-    stock_description = stock_data['Business Summary']
-
-    print(f"Processing stock {idx} / {len(company_tickers)} :", stock_ticker)
-
-    vectorstore_from_documents = PineconeVectorStore.from_documents(
-        documents=[Document(page_content=stock_description, metadata=stock_data)],
-        embedding=hf_embeddings,
-        index_name=index_name,
-        namespace=namespace
-    )
-
 # Parallelizing
 # Initialize tracking lists
 successful_tickers = []
