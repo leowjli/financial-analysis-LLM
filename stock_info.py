@@ -12,6 +12,7 @@ from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone
 import numpy as np
 import requests
+from groq import Groq
 import re
 import os
 
@@ -382,8 +383,7 @@ augmented_query = "<CONTEXT>\n" + "\n\n-------\n\n".join(contexts[ : 10]) + "\n-
 print(augmented_query)
 
 
-client = OpenAI(
-  base_url="https://api.groq.com/openai/v1",
+client = Groq(
   api_key=os.getenv("GROQ_API_KEY")
 )
 
